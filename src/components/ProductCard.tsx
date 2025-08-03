@@ -14,7 +14,12 @@ export const ProductCard = ({ id, title, description, price, image }: Product) =
   
   return (
     <div className="border rounded-lg p-4 shadow-sm flex flex-col">
-      <Image src={image} alt={title} className="h-40 object-contain mb-4" />
+      <Image
+        src={image}
+        alt={title}
+        width={200}
+        height={200}
+        className="object-contain" />
       <h3 className="font-bold">{title}</h3>
       <p className="text-sm text-gray-600 line-clamp-2">{description}</p>
       <div className="mt-auto flex justify-between items-center pt-4">
