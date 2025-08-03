@@ -26,7 +26,7 @@ export const ProductCard = ({ id, title, description, price, image }: Product) =
         <span className="font-semibold text-lg">${price.toFixed(2)}</span>
         <button
           className="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700 text-sm"
-          onClick={() => addToCart({ id, title, price, quantity: 1 })}
+          onClick={() => addToCart({ id, title, price, image, quantity: 1 })}
         >
           Add to Cart
         </button>
