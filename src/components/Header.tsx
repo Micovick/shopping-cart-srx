@@ -2,13 +2,17 @@ import CartIcon from './CartIcon'
 import SearchBar from './SearchBar'
 import Link from 'next/link'
 
-export default function Header() {
+interface Props {
+  onSearch?: (term: string) => void
+}
+
+export default function Header({ onSearch }: Props) {
   return (
-    <header className="flex justify-between items-center p-4 border-b shadow">
-      <Link href="/" className="text-xl font-bold text-blue-600">
+    <header className="flex justify-between items-center p-4 bg-black shadow-sm">
+      <Link href="/" className="text-xl font-bold text-white">
         MyStore
       </Link>
-      <SearchBar />
+      <SearchBar onSearch={onSearch}/>
       <CartIcon />
     </header>
   )
