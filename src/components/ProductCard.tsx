@@ -25,6 +25,7 @@ export const ProductCard = ({ id, title, description, price, image }: Product) =
           }}
           className="bg-white border border-gray-400 w-6 h-6 flex items-center justify-center rounded hover:bg-gray-100"
           title="Add to cart"
+          aria-label="Add to cart"
         >
           <Plus className="w-4 h-4 text-black" />
         </button>
